@@ -1,8 +1,15 @@
+import os
 from flask import Flask, request, jsonify, render_template
 import subprocess
 
 app = Flask(__name__)
 
+
+# Load the secret key from Render's environment variables
+app.config['SECRET_KEY'] = os.getenv("SECRET_KEY")
+
+if not app.config['SECRET_KEY']:
+    raise ValueError("SECRET_KEY is not set in the environment variables.")
 
 # Serve the HTML form on the home page
 @app.route('/', methods=['GET', 'POST'])
