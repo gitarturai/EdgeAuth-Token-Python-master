@@ -115,13 +115,11 @@
             // Get form data
             const formData = new FormData(this);
             const data = {
-                key: "929d35e8afb4de7f5ff3f938ea7e479b44df778ffa807243e76b4b38191c9406",
                 acl: "/*",
                 window_seconds: formData.get('window_seconds')
             };
 
             // Send the data to the back-end
-            //fetch('http://127.0.0.1:5000/', {
             fetch('/', {
                     method: 'POST',
                     headers: {
