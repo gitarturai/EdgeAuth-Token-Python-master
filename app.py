@@ -20,7 +20,7 @@ def index():
             if not data:
                 return jsonify({"error": "No data received"}), 400
 
-            key = {{ secrets.SECRET_KEY }} #data.get('key')  # Extract variable 1
+            key = app.config['SECRET_KEY']
             acl = data.get('acl')
             window_seconds = data.get('window_seconds')  # Extract variable 2
 
