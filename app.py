@@ -34,6 +34,3 @@ def index():
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=10000, debug=True)
-
-
-#Received key: 4A2E8C0E6A4C2E8A0E4C2A8E0C4A2E8C, path: /api, window_seconds: 500
