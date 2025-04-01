@@ -137,7 +137,7 @@
                     domain = document.getElementById('url_domain').value
                     path = document.getElementById('url_path').value
                     token = result.output.split('\n')[1]
-                    document.getElementById('result').innerHTML = domain + path + "?" + token
+                    document.getElementById('result').innerHTML = domain + path + "?forceRCOne=true&" + token
                     //alert('Script ran successfully! Output: ' + result.output);
                 })
                 .catch(error => {
