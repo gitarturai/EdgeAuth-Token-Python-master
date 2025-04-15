@@ -28,7 +28,7 @@ def index():
             print(f"Received key: {key}, acl: {acl}, window_seconds: {window_seconds}")
 
             result = subprocess.run(
-                ['python', 'cms_edgeauth.py', "-k", key, "-a", acl, "-w", "500", "-s" "now"],  # Pass variables as arguments
+                ['python', 'cms_edgeauth.py', "-k", key, "-a", acl, "-w", window_seconds, "-s" "now"],  # Pass variables as arguments
                 capture_output=True,
                 text=True
             )
